@@ -26,7 +26,7 @@ module SecretsCli
         @vault ||=
           ::Vault::Client.new(
             address: config.vault_addr,
-            token: SecretsCli::Vault::Auth.new(options).call.client_token
+            token: SecretsCli::Vault::Auth.new(options).call
           )
       end
 
